@@ -61,7 +61,7 @@ Login As
     VerifyText                  Freeze                      timeout=45                  # this is slow, needs longer timeout
     ClickText                   Login                       anchor=Freeze               delay=1
 
-CreateOpenTask
+TestHidde
     [Documentation]
     [Arguments]
     ClickText                   Taken
