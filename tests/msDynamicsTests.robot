@@ -4,6 +4,9 @@ Library                   QWeb
 Suite Setup               Open Browser                about:blank                 chrome
 Suite Teardown            Close All Browsers
 
+*** Variables ***
+${accountname}    Test
+
 *** Test Cases ***
 
 loginTest
@@ -17,10 +20,15 @@ loginTest
     ClickText             No
     ClickText             Proefversie van Sales
 
-HealingTest
+Recording
     [Documentation]
     [Tags]
-    ClickText         Accounts
+    ClickText    Accounts
+    ClickText    Nieuw    anchor=Hiermee maakt u een nieuwe record Account.
+    TypeText    Accountnaam    Tester
+    TypeText    Een telefoonnummer opgeven    0612345678
+    TypeText    Jaaromzet    60000
+
 
 CreateAccount
     [Documentation]
@@ -30,7 +38,7 @@ CreateAccount
     VerifyText            Snelle invoer: Account
     
     ClickText             Accountnaam                 anchor=Snelle invoer: Account
-    TypeText              Accountnaam                 Test
+    TypeText              Accountnaam                 ${accountname}
     
     ClickText             Telefoon 1
     TypeText              Een telefoonnummer opgeven                              0612345678
@@ -55,11 +63,12 @@ CreateAccount
     
     ClickText             Opslaan en sluiten
     VerifyText            Test
+    Set Variable
 
 DeleteAccount
     [Documentation]
     [Tags]
-    ClickText             Test
+    ClickText             ${accountname}
     VerifyInputElement    Accountnaam                 Test
     ClickText             Verwijderen                 anchor=Verwijder Accounts. Deze actie kan niet ongedaan worden gemaakt.
     ClickText             Verwijderen                 anchor=Klik op Verwijderen om door te gaan met het verwijderen van de/het Account.
@@ -120,4 +129,4 @@ RemovePotentialCustomer
 CreateTask
     [Documentation]
     [Tags]
-    CreateOpenTask
+    CreateOpenTask    
