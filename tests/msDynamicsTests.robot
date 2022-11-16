@@ -23,14 +23,31 @@ CreateAccount
     ClickText             Accounts
     ClickText             Nieuw                       anchor=Hiermee maakt u een nieuwe record Account.
     VerifyText            Snelle invoer: Account
+    
+    ClickText             Accountnaam                 anchor=Details
     TypeText              Accountnaam                 Test
+    
+    ClickText             Telefoon 1
     TypeText              Een telefoonnummer opgeven                              0612345678
+    
+    ClickText             Jaaromzet
     TypeText              Jaaromzet                   600000
+    
+    ClickText             Aantal werknemers
     TypeText              Aantal werknemers           25
+    
+    ClickText             Beschrijving
     TypeText              Beschrijving                Testing description
+    
+    ClickText             Adres 1
     TypeText              Adres 1                     Teststraat 12
+    
+    ClickText             Plaats
     TypeText              Plaats                      Amsterdam
+    
+    ClickText             Postcode
     TypeText              Postcode                    2121AA
+    
     ClickText             Opslaan en sluiten
     VerifyText            Test
 
@@ -50,7 +67,7 @@ CreatePotentialCustomer
 
     VerifyText            Snelle invoer: Potentiële klant
 
-    ClickText             Onderwerp                   anchor=Visitekaartje scannen
+    ClickText             Onderwerp                   anchor=Details
     TypeText              Onderwerp                   test
 
     ClickText             Budgetbedrag
@@ -98,4 +115,4 @@ RemovePotentialCustomer
 CreateTask
     [Documentation]
     [Tags]
-    TestHidde
+    CreateOpenTask
