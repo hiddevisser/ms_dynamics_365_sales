@@ -12,7 +12,6 @@ loginTest
     GoTo                  https://orgfcb8dffb.crm.dynamics.com/
     TypeText              Email, phone, or Skype      hidde.visser2@gmail.com
     ClickText             Next
-    # TypeSecret            Password                    ^8^2CWv7W$jkFf1
     TypeSecret            Password                    ${password}
     ClickText             Sign in
     ClickText             No
@@ -26,7 +25,7 @@ HealingTest
 CreateAccount
     [Documentation]
     [Tags]
-    ClickText             Accounts
+    ClickText             Accounts    anchor=Details
     ClickText             Nieuw                       anchor=Hiermee maakt u een nieuwe record Account.
     VerifyText            Snelle invoer: Account
     
