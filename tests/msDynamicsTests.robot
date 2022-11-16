@@ -1,8 +1,8 @@
 *** Settings ***
 Resource                  ../resources/common.robot
-Library                 QWeb
-Suite Setup             Open Browser    about:blank    chrome
-Suite Teardown          Close All Browsers
+Library                   QWeb
+Suite Setup               Open Browser                about:blank                 chrome
+Suite Teardown            Close All Browsers
 
 *** Test Cases ***
 
@@ -15,12 +15,14 @@ loginTest
     TypeSecret            Password                    ^8^2CWv7W$jkFf1
     ClickText             Sign in
     ClickText             No
+    ClickText             Proefversie van Sales
 
 CreateAccount
     [Documentation]
     [Tags]
     ClickText             Accounts
     ClickText             Nieuw                       anchor=Hiermee maakt u een nieuwe record Account.
+    VerifyText            Snelle invoer: Account
     TypeText              Accountnaam                 Test
     TypeText              Een telefoonnummer opgeven                              0612345678
     TypeText              Jaaromzet                   600000
@@ -44,13 +46,15 @@ CreatePotentialCustomer
     [Documentation]
     [Tags]
     ClickText             Potentiële klanten
-    ClickText             Nieuw
+    ClickText             Nieuw                       anchor=Grafiek weergeven
+
+    VerifyText            Snelle invoer: Potentiële klant
 
     ClickText             Onderwerp                   anchor=Visitekaartje scannen
-    WriteText             test
+    TypeText              Onderwerp                   test
 
     ClickText             Budgetbedrag
-    WriteText             60000
+    TypeText             Budgetbedrag                 60000
 
     ClickText             Aankooptijdsbestek
     DropDown              Aankooptijdsbestek          Dit kwartaal
@@ -59,25 +63,25 @@ CreatePotentialCustomer
     DropDown              Bron van potentiële klant                               Beurs
 
     ClickText             Voornaam
-    WriteText             Test
+    TypeText             Voornaam                        Test
 
     ClickText             Achternaam
-    WriteText             Tester
+    TypeText             Achternaam                      Tester
 
     ClickText             Functie
-    WriteText             Solution engineer
+    TypeText             Functie                        Solution engineer
 
     ClickText             Bedrijfsnaam
-    WriteText             Copado
+    TypeText             Bedrijfsnaam                   Copado
 
     ClickText             E-mailadres
-    WriteText             hvisser@copado.com
+    TypeText             E-mailadres                    hvisser@copado.com
 
     ClickText             Mobiele telefoon
-    WriteText             0612345678
+    TypeText             Mobiele telefoon               0612345678
 
     ClickText             Beschrijving
-    WriteText             Test beschrijving
+    TypeText             Beschrijving                   Test beschrijving
 
     ClickText             Opslaan en sluiten
     VerifyText            Tester, Test
@@ -85,11 +89,11 @@ CreatePotentialCustomer
 RemovePotentialCustomer
     [Documentation]
     [Tags]
-    ClickText    Potentiële klanten
-    ClickText    Tester, Test
-    VerifyInputElement    Voornaam    Test
+    ClickText             Potentiële klanten
+    ClickText             Tester, Test
+    VerifyInputElement    Voornaam                    Test
     ClickText             Verwijderen
-    ClickText    Verwijderen    anchor=Wilt u Potentiële klant verwijderen? U kunt deze actie niet ongedaan maken.
+    ClickText             Verwijderen                 anchor=Wilt u Potentiële klant verwijderen? U kunt deze actie niet ongedaan maken.
 
 CreateTask
     [Documentation]
