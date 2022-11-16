@@ -62,8 +62,6 @@ Login As
     ClickText                   Login                       anchor=Freeze               delay=1
 
 CreateOpenTask
-    [Documentation]
-    [Arguments]
     ClickText                   Taken
     ClickText                   Taak
     ClickText                   Onderwerp
