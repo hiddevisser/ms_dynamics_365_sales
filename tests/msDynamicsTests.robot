@@ -12,10 +12,16 @@ loginTest
     GoTo                  https://orgfcb8dffb.crm.dynamics.com/
     TypeText              Email, phone, or Skype      hidde.visser2@gmail.com
     ClickText             Next
-    TypeSecret            Password                    ^8^2CWv7W$jkFf1
+    # TypeSecret            Password                    ^8^2CWv7W$jkFf1
+    TypeSecret            Password                    ${password}
     ClickText             Sign in
     ClickText             No
     ClickText             Proefversie van Sales
+
+HealingTest
+    [Documentation]
+    [Tags]
+    ClickText         Accounts
 
 CreateAccount
     [Documentation]
