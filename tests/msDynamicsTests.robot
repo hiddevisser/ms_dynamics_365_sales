@@ -25,7 +25,7 @@ HealingTest
 CreateAccount
     [Documentation]
     [Tags]
-    ClickText             Accounts    anchor=Details
+    ClickText             Accounts
     ClickText             Nieuw                       anchor=Hiermee maakt u een nieuwe record Account.
     VerifyText            Snelle invoer: Account
     
