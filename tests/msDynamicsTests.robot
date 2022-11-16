@@ -29,7 +29,7 @@ CreateAccount
     ClickText             Nieuw                       anchor=Hiermee maakt u een nieuwe record Account.
     VerifyText            Snelle invoer: Account
     
-    ClickText             Accountnaam                 anchor=Details
+    ClickText             Accountnaam                 anchor=Snelle invoer: Account
     TypeText              Accountnaam                 Test
     
     ClickText             Telefoon 1
