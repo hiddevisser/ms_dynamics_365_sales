@@ -64,8 +64,3 @@ Login As
 CreateOpenTask
     ClickText                   Taken
     ClickText                   Taak
-    ClickText                   ${Onderwerp}
-    TypeText                    Onderwerp                   Test taak onderwerp
-    TypeText                    Beschrijving                Test beschrijving taak
-    ClickText                   Opslaan
-    ClickText                   Taken
