@@ -62,7 +62,6 @@ Login As
     ClickText                   Login                       anchor=Freeze               delay=1
 
 CreateOpenTask
-    [Arguments]    ${Onderwerp}    ${beschrijving}
     ClickText                   Taken
     ClickText                   Taak
     ClickText                   ${Onderwerp}
