@@ -129,4 +129,4 @@ RemovePotentialCustomer
 CreateTask
     [Documentation]
     [Tags]
-    CreateOpenTask    
+    CreateOpenTask
