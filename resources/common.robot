@@ -11,15 +11,6 @@ ${username}                     hidde.visser2@gmail.com
 ${login_url}                    https://qentinel--demonew.my.salesforce.com/            # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
 
-*** Test Cases ***
-    # Tip: Test cases start from here. The structure of a test case is as follows:
-    #                           Name of the test
-    #                           [Documentation]             A short explanation of the test.
-    #                           Test steps
-    #
-    #                           A new test case starts from the beginning of the line. Each test step starts with four
-    #                           spaces, followed by a QWord, at least four spaces, and its arguments.
-
 *** Keywords ***
 Setup Browser
     # Setting search order is not really needed here, but given as an example
